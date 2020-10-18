@@ -1,0 +1,24 @@
+.toy-preview {
+    border: 1px dotted $clr3;
+    padding: 20px;
+    background-color: $clr3;
+    border-radius: 21px;
+
+
+    .type {
+        color:$clr1;
+        font-family: caveat;
+        margin: 0 0 0.6em;
+        line-height: 1;
+    }
+
+    .preview-name {
+        min-height: 100px;
+    }
+
+    @for $i from 1 through 1000 {
+        &:nth-child(#{$i}) {
+            background-color: adjust-hue($clr3, $i*7deg );
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.log-sign-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom,#{$clr1},#{$clr1},#{$clr3},#{$clr2},#{$clr1});
+
+    &::before {
+        content:"";
+        width:250px;
+        height: 100px;
+        background-image: url('http://38.media.tumblr.com/512aa2b4c47276e656036249dbaa5506/tumblr_n8ie0o3WG61twkrf5o1_400.gif');
+        background-size: cover;
+
+    }
+
+    form {
+        margin: 0 5px 5px 5px;
+        border-radius: 21px;
+        padding:rem(10px);
+        width: 300px;
+
+        @for $i from 1 through 2 {
+            &:nth-child(#{$i}) {
+                background-color: adjust-hue($clr4, $i*20deg );
+            }
+        }
+    }
+
+}
+
+.logout { //important bacause of UI
+    background-color: $clr4 !important;
+    color:white !important;
+}
